@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    h1 Add Customer
+    form.user_input(action='/customers', method='post')
+        label(for='Firstname')
+            span First Name
+            input(type='text', name='FirstName', id='FirstName', required='true')
+        label(for='Last_name')
+            span Last Name
+            input(type='text', name='LastName', id='LastName', required='true')
+        label(for='Adress')
+            span Adress
+            input(type='text', name='Adress', id='Adress', required='true')
+         label(for='Tel')
+            span Tel
+            input(type='text', name='Tel', id='Tel', required='true')
+        label(for='email')
+            span Email
+            input(type='email', name='Email', id='Email', required='true')
+      
+        label.control-label(for='submit')
+            span
+            input(type='submit', id='submit', value='Save')
+
+
+     

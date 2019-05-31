@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+    h1= title
+    table.shop_table
+        tr
+            th Name
+            th Adress
+            th Tel
+            th Email
+            th CarParts
+            th Staff
+            th Manufacturer
+           
+           
+               
+            th Delete
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                tr
+                    td #{shop.Name}
+                    td #{shop.Adress}
+                    td #{shop.Tel}
+                    td #{shop.Email}
+                    td #{shop.CarParts}
+                    td #{shop.Staff}
+                    td #{shop.Manufacturer}
+                    if shopid
+                        - var not_found = true
+                        td.center
+                            if shopid === shop.id
+                                b You
+                                - not_found = false
+                          
+                    td.center
+                        a(href="/shop/delete?id=#{shop.id}")
+                            img.icon(src="/images/delete.png")
+        else
+            tr
+                td(colspan=6) No records

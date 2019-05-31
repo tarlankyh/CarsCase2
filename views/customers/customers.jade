@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+    h1= title
+    table.customer_table
+        tr
+            th First Name
+            th Last Name
+            th Adress
+            th Tel
+            th Email
+           
+           
+               
+            th Delete
+        if customer_list && customer_list.length > 0
+            each customer in customer_list
+                tr
+                    td #{customer.FirstName}
+                    td #{customer.LastName}
+                    td #{customer.Adress}
+                    td #{customer.Tel}
+                    td #{customer.Email}
+                    if customerid
+                        - var not_found = true
+                        td.center
+                            if customerid === customer.id
+                                b You
+                                - not_found = false
+                          
+                    td.center
+                        a(href="/customers/delete?id=#{customer.id}")
+                            img.icon(src="/images/delete.png")
+        else
+            tr
+                td(colspan=6) No records

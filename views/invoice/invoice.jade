@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+    h2= title
+    table.invoice_table
+        tr
+           th order_date
+           th ShopID
+           th CustomerID
+           th Item
+           th Price
+           th Brand
+           th Seller
+           th Manufacturer
+           
+                
+           
+               
+            th Delete
+        if invoice_list && invoice_list.length > 0
+            each invoice in invoice_list
+                tr
+                    td #{invoice.order_date}
+                    td #{invoice.ShopID}
+                    td #{invoice.CustomerID}
+                    td #{invoice.Item}
+                    td #{invoice.Price}
+                    td #{invoice.Brand}
+                    td #{invoice.Seller}
+                    td #{invoice.Manufacturer}
+                    if invoiceid
+                        - var not_found = true
+                        td.center
+                            if invoiceid === invoice.id
+                                b You
+                                - not_found = false
+                    td.center
+                        a(href="/invoice/delete?id=#{invoice.id}")
+                            img.icon(src="/images/delete.png")
+        else
+            tr
+                td(colspan=6) No records

@@ -1,0 +1,463 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  color: rgb(255, 94, 1);
+  background: rgb(37, 37, 39);
+  
+}
+
+
+
+h2 {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  color: rgb(255, 94, 1);
+  background: rgb(37, 37, 39);
+  
+}
+
+.error {
+  color: red;
+  font-family: "Comic Sans MS";
+  text-decoration: underline;
+}
+
+#lucky_number {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+}
+
+.layout-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: 2px;
+}
+
+.title {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 72px;
+  color: rgb(25, 41, 71);
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+
+/* Menu Buttons */
+.menu {
+  background: rgb(30, 30, 31);
+  color: #dae5f4;
+  font-family: "Franklin Gothic Medium Black";
+  font-size: 24px;
+  border-radius: 10px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  margin: 15px;
+  box-shadow: #394D61 8px 8px 20px;
+}
+
+
+
+
+
+.menu:hover {
+  color: #ff7301;
+  text-decoration: aqua;
+}
+
+.menu-box {
+  margin-bottom: 50px;
+}
+
+/* Customer Table */
+.customer_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customer_table th {
+  padding: 15px;
+  border: #ff5e00 1px solid;
+  background: rgb(10, 10, 10);
+  color: white;
+}
+
+.customer_table td {
+  padding: 15px;
+  border: #4e95f4 1px solid;
+}
+
+.customer_table td.center {
+  text-align: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.avatar-icon {
+  width: 72px;
+  height: 72px;
+  padding: 5px;
+}
+
+/* Fallback for IE < 8 */
+.customer_table tr{
+  background: #b8d1f3;
+}
+
+.customer_table tr:nth-child(odd){
+  background: #b8d1f3;
+}
+
+.customer_table tr:nth-child(even){
+  background: #dae5f4;
+}
+
+/* Input Form*/
+.user_input{
+  width: 500px;
+  font-size: 16px;
+  background: rgb(34, 109, 119);
+  padding: 30px 30px 15px 30px;
+  border: 25px solid #53687E;
+}
+.user_input input[type=submit],
+.user_input input[type=button],
+.user_input input[type=text],
+.user_input input[type=email],
+.user_input input[type=password],
+.user_input textarea,
+.user_input label
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #fff;
+
+}
+.user_input label {
+  display:block;
+  margin-bottom: 10px;
+}
+.user_input label > span{
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+.user_input input[type=text],
+.user_input input[type=email],
+.user_input input[type=password]
+{
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+.user_input textarea{
+  font-style: italic;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  overflow: hidden;
+  resize:none;
+  height:20px;
+}
+
+.user_input textarea:focus,
+.user_input input[type=text]:focus,
+.user_input input[type=email]:focus,
+.user_input input[type=password]:focus
+{
+  border-bottom: 1px dashed #D9FFA9;
+}
+
+.user_input input[type=submit],
+.user_input input[type=button]{
+  background: rgb(7, 7, 7);
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #ff7301;
+}
+.user_input input[type=submit]:hover,
+.user_input input[type=button]:hover{
+  background: rgb(7, 7, 7);
+}
+
+
+/* Shop Table */
+.shop_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shop_table th {
+  padding: 15px;
+  border: #ff5e00 1px solid;
+  background: rgb(10, 10, 10);
+  color: white;
+}
+
+.shop_table td {
+  padding: 15px;
+  border: #4e95f4 1px solid;
+}
+
+.shop_table td.center {
+  text-align: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.avatar-icon {
+  width: 72px;
+  height: 72px;
+  padding: 5px;
+}
+
+/* Fallback for IE < 8 */
+.shop_table tr{
+  background: #b8d1f3;
+}
+
+.shop_table tr:nth-child(odd){
+  background: #b8d1f3;
+}
+
+.shop_table tr:nth-child(even){
+  background: #dae5f4;
+}
+
+/* Input Form för shop*/
+.shop_input{
+  width: 1000px;
+  font-size: 16px;
+  background: rgb(34, 109, 119);
+  padding: 30px 30px 15px 30px;
+  border: 25px solid #53687E;
+}
+.shop_input input[type=submit],
+.shop_input input[type=button],
+.shop_input input[type=text],
+.shop_input input[type=email],
+.shop_input input[type=password],
+.shop_input textarea,
+.shop_input label
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #fff;
+
+}
+.shop_input label {
+  display:block;
+  margin-bottom: 10px;
+}
+.shop_input label > span{
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+.shop_input input[type=text],
+.shop_input input[type=email],
+.shop_input input[type=password]
+{
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+.shop_input textarea{
+  font-style: italic;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  overflow: hidden;
+  resize:none;
+  height:20px;
+}
+
+.shop_input textarea:focus,
+.shop_input input[type=text]:focus,
+.shop_input input[type=email]:focus,
+.shop_input input[type=password]:focus
+{
+  border-bottom: 1px dashed #D9FFA9;
+}
+
+.shop_input input[type=submit],
+.shop_input input[type=button]{
+  background: rgb(7, 7, 7);
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #A8BACE;
+}
+.shop_input input[type=submit]:hover,
+.shop_input input[type=button]:hover{
+  background: #394D61;
+}
+
+
+
+/* Faktura Tabel */
+.invoice_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice_table th {
+  padding: 15px;
+  border: #ff5e00 1px solid;
+  background: rgb(10, 10, 10);
+  color: white;
+}
+
+.invoice_table td {
+  padding: 15px;
+  border: #4e95f4 1px solid;
+}
+
+.invoice_table td.center {
+  text-align: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.avatar-icon {
+  width: 72px;
+  height: 72px;
+  padding: 5px;
+}
+
+/* Fallback for IE < 8 */
+.invoice_table tr{
+  background: #b8d1f3;
+}
+
+.invoice_table tr:nth-child(odd){
+  background: #b8d1f3;
+}
+
+.invoice_table tr:nth-child(even){
+  background: #dae5f4;
+}
+
+
+
+
+/* Input Form för invoice*/
+.invoice_input{
+  width: 500px;
+  font-size: 16px;
+  background: rgb(34, 109, 119);
+  padding: 30px 30px 15px 30px;
+  border: 25px solid #53687E;
+}
+.invoice_input input[type=submit],
+.invoice_input input[type=button],
+.invoice_input input[type=text],
+.invoice_input input[type=date],
+.invoice_input input[type=password],
+.invoice_input textarea,
+.invoice_input label
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #fff;
+
+}
+.invoice_input label {
+  display:block;
+  margin-bottom: 10px;
+}
+.invoice_input label > span{
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+.invoice_input input[type=text],
+.invoice_input input[type=date],
+.invoice_input input[type=password]
+{
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+.invoice_input textarea{
+  font-style: italic;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  overflow: hidden;
+  resize:none;
+  height:20px;
+}
+
+.invoice_input textarea:focus,
+.invoice_input input[type=text]:focus,
+.invoice_input input[type=date]:focus,
+.invoice_input input[type=password]:focus
+{
+  border-bottom: 1px dashed #D9FFA9;
+}
+
+.invoice_input input[type=submit],
+.invoice_input input[type=button]{
+  background: rgb(7, 7, 7);
+  border: none;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: #ff7301;
+}
+.invoice_input input[type=submit]:hover,
+.invoice_input input[type=button]:hover{
+  background: rgb(7, 7, 7);
+}
+

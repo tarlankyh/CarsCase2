@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+    h2 Add Invoice
+    form.invoice_input(action='/invoice', method='post')
+        label(for='order_date')
+            span order_date
+            input(type='date', name='order_date', id='order_date', required='true')
+        label(for='ShopID')
+            span ShopID
+            input(type='text', name='ShopID', id='ShopID', placeholder='Only ID',required='true')
+        label(for='CustomerID')
+            span CustomerID
+            input(type='text', name='CustomerID', id='CustomerID', placeholder='Only ID',required='true')
+        label(for='Item')
+            span Item
+            input(type='text', name='Item', id='Item',placeholder='Only ID', required='true')
+        label(for='Price')
+            span Price
+            input(type='text', name='Price', id='Price', required='true')
+        label(for='Brand')
+            span Brand
+            input(type='text', name='Brand', id='Brand', required='true')   
+        label(for='Seller')
+            span Seller
+            input(type='text', name='Seller', id='Seller', placeholder='FirstName and LastName',required='true')
+        label(for='Manufacturer')
+            span Manufacturer
+            input(type='text', name='Manufacturer', id='Manufacturer', required='true')
+    
+        label.control-label(for='submit')
+            span
+            input(type='submit', id='submit', value='Save')

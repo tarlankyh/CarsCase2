@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 --------- #{title}----------
+  form.user_input(action='/search', method='post')
+    label(for='search')
+      span Search Shop
+      input(type='text', name='search', id='search')
+    label.control-label(for='submit')
+      span
+      input(type='submit', id='submit', value='Search')
+
+
