@@ -8,11 +8,10 @@ block content
             th Adress
             th Tel
             th Email
-            th CarParts
-            th Staff
-            th Manufacturer
+    
+          
            
-           
+    
                
             th Delete
         if shop_list && shop_list.length > 0
@@ -22,9 +21,8 @@ block content
                     td #{shop.Adress}
                     td #{shop.Tel}
                     td #{shop.Email}
-                    td #{shop.CarParts}
-                    td #{shop.Staff}
-                    td #{shop.Manufacturer}
+                  
+                   
                     if shopid
                         - var not_found = true
                         td.center
@@ -38,3 +36,86 @@ block content
         else
             tr
                 td(colspan=6) No records
+
+
+
+
+    h3= "Car Parts in Store"
+    table.carparts_table
+        tr
+            th CarParts
+           
+    
+               
+       
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                tr
+                
+                    td #{shop.CarParts}
+                    if shopid
+                        - var not_found = true
+                        td.center
+                            if shopid === shop.id
+                                b You
+                                - not_found = false
+                
+        else
+            tr
+                td(colspan=6) No records
+
+
+     h3= "Manufacturer"
+    table.carparts_table
+        tr
+            th Manufacturer
+           
+    
+               
+           
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                tr
+                    td #{shop.Manufacturer}
+                    if shopid
+                        - var not_found = true
+                        td.center
+                            if shopid === shop.id
+                                b You
+                                - not_found = false
+                    
+        else
+            tr
+                td(colspan=6) No records
+
+
+
+
+      h3= "Staff"
+    table.carparts_table
+        tr
+            th Staff
+           
+    
+               
+            
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                tr
+                    td #{shop.Staff}
+                    if shopid
+                        - var not_found = true
+                        td.center
+                            if shopid === shop.id
+                                b You
+                                - not_found = false
+           
+        else
+            tr
+                td(colspan=6) No records
+       
+
+
+    
+
+    

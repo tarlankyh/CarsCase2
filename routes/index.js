@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'CAR PARTS SHOP', customerid: customerid });
 });
 
+
+
+
+
 module.exports = router;

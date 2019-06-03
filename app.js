@@ -15,6 +15,8 @@ const dashboardRouter = require('./routes/dashboard');
 const invoiceRouter=require('./routes/invoice');
 
 
+
+
 const app = express();
 
 mongoose.connect('mongodb://localhost/CarsDB',{
@@ -58,6 +60,14 @@ app.use('/search', searchRouter);
 app.use('/dashboard', dashboardRouter);
 app.use ('/shop', shopRouter);
 app.use ('/invoice', invoiceRouter);
+
+
+
+
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

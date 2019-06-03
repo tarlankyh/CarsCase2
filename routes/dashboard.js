@@ -24,6 +24,19 @@ const rd2 = (req, res, next) => {
     }
 };
 
+
+
+const rd3 = (req, res, next) => {
+    if(!req.session['PartsID']) {
+        res.redirect('/Parts');
+    }
+    else {
+        next();
+    }
+};
+
+
+
 router.get('/', rdl, function(req, res){
     da.getUserById(req.session['customerid'], function(err, u){
 
@@ -59,6 +72,26 @@ router.get('/', rd2, function(req, res){
     });
 
 });
+
+
+
+router.get('/', rd3, function(req, res){
+    da.getShopByCarParts(req.session['PartsID'], function(err, u){
+
+        da.getAllParts(u, function(Parts){
+            console.log(Parts);
+            res.render('dashboard', {
+                title: "Dashboard for " + u.Item,
+                shop: u,
+                PartsID: PartsID,
+                
+            });
+        });
+
+    });
+
+});
+
 
 
 module.exports = router;

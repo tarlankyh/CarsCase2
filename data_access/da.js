@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 
+
+
 function connect2db() {
     mongoose.connect('mongodb://localhost:27017/CarsDB',
         { useNewUrlParser: true });
@@ -91,12 +93,14 @@ function deleteShop(id, cb) {
 function getAllShop(cb) {
     connect2db();
     Shopp.find(function(err, shop) {
-        if(err) {
+        if(err)  {
             console.log('Error getting invoice' + err);
-        } 
+        }
+
         cb(err, shop);
     });
 }
+
 
 
 function getAllInvoice(cb) {
@@ -125,6 +129,10 @@ function getShopById(shopid, cb) {
         cb(err, shops);
     });
 }
+
+
+
+
 
 
 
@@ -163,8 +171,10 @@ module.exports = {
     showShop:getAllShop,
     deleteShop:deleteShop,
     getshopbyId:getShopById,
-    Invo:getAllInvoice,
+    getAllInvoice:getAllInvoice,
     getInvoiceById:getInvoiceById,
     deleteInvoice:deleteInvoice,
     saveInvoiceFromForm:saveInvoice,
+  
+    
 };

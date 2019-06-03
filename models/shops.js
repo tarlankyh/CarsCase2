@@ -9,7 +9,7 @@ const Parts=new Schema({
     Brand:String,
     Info:String,
     Fits:String,
-    Id:String,
+    ID:String,
     Price_in:String,
     Price_out:String,
     Quantity:Number
@@ -47,5 +47,6 @@ const shopschema = new Schema({
 
    
 const Shopp = mongoose.model('shop', shopschema);
+
 
 module.exports = Shopp;

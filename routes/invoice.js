@@ -5,7 +5,7 @@ var da = require('../data_access/da');
 
 /* GET invoice listing. */
 router.get('/', function(req, res, next) {
-  da.Invo(function(err, invoice) {
+  da.getAllInvoice(function(err, invoice) {
     var invoiceid = req.session['invoiceid'];
     if(invoiceid){
       da.getInvoiceById(invoiceid, function(err, Invoice){

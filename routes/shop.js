@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+
   router.get('/delete', function(req, res){
     da.deleteShop(req.query.id, function(err){
       res.redirect('/shop');
