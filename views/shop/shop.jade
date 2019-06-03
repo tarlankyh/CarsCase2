@@ -43,6 +43,7 @@ block content
     h3= "Car Parts in Store"
     table.carparts_table
         tr
+            th Name of Shop
             th CarParts
            
     
@@ -51,7 +52,7 @@ block content
         if shop_list && shop_list.length > 0
             each shop in shop_list
                 tr
-                
+                    td #{shop.Name}
                     td #{shop.CarParts}
                     if shopid
                         - var not_found = true
@@ -68,6 +69,7 @@ block content
      h3= "Manufacturer"
     table.carparts_table
         tr
+            th Name of Shop
             th Manufacturer
            
     
@@ -76,6 +78,7 @@ block content
         if shop_list && shop_list.length > 0
             each shop in shop_list
                 tr
+                    td #{shop.Name}
                     td #{shop.Manufacturer}
                     if shopid
                         - var not_found = true
@@ -94,6 +97,7 @@ block content
       h3= "Staff"
     table.carparts_table
         tr
+            th Name of Shop
             th Staff
            
     
@@ -102,6 +106,7 @@ block content
         if shop_list && shop_list.length > 0
             each shop in shop_list
                 tr
+                    td #{shop.Name}
                     td #{shop.Staff}
                     if shopid
                         - var not_found = true
