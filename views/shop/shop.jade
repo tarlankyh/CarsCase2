@@ -8,12 +8,10 @@ block content
             th Adress
             th Tel
             th Email
-    
-          
-           
-    
-               
+        
             th Delete
+
+
         if shop_list && shop_list.length > 0
             each shop in shop_list
                 tr
@@ -39,88 +37,10 @@ block content
 
 
 
-
-    h3= "Car Parts in Store"
-    table.carparts_table
-        tr
-            th Name of Shop
-            th CarParts
-           
-    
-               
-       
-        if shop_list && shop_list.length > 0
-            each shop in shop_list
-                tr
-                    td #{shop.Name}
-                    td #{shop.CarParts}
-                    if shopid
-                        - var not_found = true
-                        td.center
-                            if shopid === shop.id
-                                b You
-                                - not_found = false
-                
-        else
-            tr
-                td(colspan=6) No records
+   
 
 
-     h3= "Manufacturer"
-    table.carparts_table
-        tr
-            th Name of Shop
-            th Manufacturer
-           
-    
-               
-           
-        if shop_list && shop_list.length > 0
-            each shop in shop_list
-                tr
-                    td #{shop.Name}
-                    td #{shop.Manufacturer}
-                    if shopid
-                        - var not_found = true
-                        td.center
-                            if shopid === shop.id
-                                b You
-                                - not_found = false
-                    
-        else
-            tr
-                td(colspan=6) No records
-
-
-
-
-      h3= "Staff"
-    table.carparts_table
-        tr
-            th Name of Shop
-            th Staff
-           
-    
-               
-            
-        if shop_list && shop_list.length > 0
-            each shop in shop_list
-                tr
-                    td #{shop.Name}
-                    td #{shop.Staff}
-                    if shopid
-                        - var not_found = true
-                        td.center
-                            if shopid === shop.id
-                                b You
-                                - not_found = false
-           
-        else
-            tr
-                td(colspan=6) No records
-       
-
-
+     
     
 
     

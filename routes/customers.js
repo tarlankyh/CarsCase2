@@ -9,11 +9,11 @@ router.get('/', function(req, res, next) {
     var customerid = req.session['customerid'];
     if(customerid){
       da.getUserById(customerid, function(err, customer){
-        res.render('customers/customers', {title:'Customer listing', customer_list: customers, customerid: customerid});
+        res.render('customers/customers', {title:'Customers', customer_list: customers, customerid: customerid});
       });
     }
     else {
-      res.render('customers/customers', {title:'Customer listing', customer_list: customers, customerid: customerid});
+      res.render('customers/customers', {title:'Customers', customer_list: customers, customerid: customerid});
     }
 
   });

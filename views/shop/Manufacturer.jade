@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+   
+   h3= "Manufacturer"
+   table.manufac_table
+        tr
+            th Name of Shop
+            th PartsID
+            th Manufacturer
+                  
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                 each dest in shop.Manufacturer
+                    tr
+                        td #{shop.Name}
+                        td
+                            p
+                                p=dest.CarParts
+                        td 
+                            p
+                                p=dest.Manufacturer
+                        if shopid
+                            - var not_found = true
+                            td.center
+                                if shopid === shop.id
+                                    b You
+                                    - not_found = false
+                        
+        else
+            tr
+                td(colspan=6) No records

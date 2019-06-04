@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+ 
+  h3= "Staff"
+  table.staff_table
+        tr
+            th Name of Shop
+            th Staff
+                      
+            
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                tr
+                    each dest in shop.Staff
+                        tr
+                            td #{shop.Name}
+                            td
+                                p
+                                    p=dest.FirstName
+                                    p=dest.LastName
+                        
+                            if shopid
+                                - var not_found = true
+                                td.center
+                                    if shopid === shop.id
+                                        b You
+                                        - not_found = false
+           
+        else
+            tr
+                td(colspan=6) No records
+       
+
+
+    
+
+    

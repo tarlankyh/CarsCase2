@@ -9,11 +9,11 @@ router.get('/', function(req, res, next) {
     var invoiceid = req.session['invoiceid'];
     if(invoiceid){
       da.getInvoiceById(invoiceid, function(err, Invoice){
-        res.render('invoice/invoice', {title:'Invoice listing', invoice_list: invoice, invoiceid: invoiceid});
+        res.render('invoice/invoice', {title:'Invoices', invoice_list: invoice, invoiceid: invoiceid});
       });
     }
     else {
-      res.render('invoice/invoice', {title:'Invoice listing', invoice_list: invoice, invoiceid: invoiceid});
+      res.render('invoice/invoice', {title:'Invoices', invoice_list: invoice, invoiceid: invoiceid});
     }
 
   });

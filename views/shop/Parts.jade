@@ -1,0 +1,59 @@
+extends ../layout
+
+block content
+    h3= "Car Parts in Store"
+    table.carparts_table
+        tr
+            th Name of Shop
+            th Item
+            th Brand
+            th Info
+            th Fits
+            th ID
+            th Price In
+            th Price Out
+            th Quantity
+
+        if shop_list && shop_list.length > 0
+            each shop in shop_list
+                    each dest in shop.CarParts
+                        tr
+                            td #{shop.Name}
+
+                            td
+                                p
+                                    p= dest.Item
+                            td 
+                                p
+                                    p=dest.Brand
+
+                            td 
+                                p
+                                    p=dest.Info
+                            td 
+                                p
+                                    p=dest.Fits
+                            td 
+                                p
+                                    p=dest.ID
+                            td
+                                p
+                                    p=dest.Price_in
+                            td 
+                                p
+                                    p=dest.Price_out
+                            td 
+                                p
+                                    p=dest.Quantity
+                                        
+                            if shopid
+                                - var not_found = true
+                                td.center
+                                    if shopid === shop.id
+                                        b You
+                                        - not_found = false
+                
+        else
+            tr
+                td(colspan=9) No records
+
